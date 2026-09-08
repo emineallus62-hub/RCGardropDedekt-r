@@ -57,8 +57,7 @@ jobs:
       - name: Build APK
         working-directory: ${{ env.PROJECT_DIR }}
         run: |
-          chmod +x gradlew
-          ./gradlew :app:assembleDebug --no-daemon --stacktrace
+          gradle :app:assembleDebug --no-daemon --stacktrace
 
       - name: Check APK
         run: |
